@@ -16,7 +16,7 @@ except ImportError:
 
 setup(
     name='instantmusic',
-    version='1.2',
+    version='1.2.0',
     description=(
         'Instantly download any song! '
         'Without knowing the name of the song!!!!'),
