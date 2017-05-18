@@ -29,18 +29,20 @@ $ sudo pip3 install instantmusic
 ### Note:
 You would also need `libav` to download in `.mp3` format.
 
-#### On Mac Os X
-##### Installation by [Brew](https://brew.sh)
+On Mac Os X
+
+Installation by [Brew](https://brew.sh)
 ```bash
  $ brew install libav
  ```
  
-#### On Ubuntu 
+On Ubuntu 
 
 ```bash
  $ sudo apt-get install libav-tools 
 ```
-#### On Windows
+On Windows
+
 >[See this](https://github.com/yask123/Instant-Music-Downloader/issues/19) 
 
 ## Usage
