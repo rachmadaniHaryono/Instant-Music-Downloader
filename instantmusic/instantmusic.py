@@ -9,8 +9,12 @@ import re
 import sys
 
 from bs4 import BeautifulSoup
-import eyed3
 import requests
+try:
+    import eyed3
+    EYED3_MODULE = True
+except ImportError:
+    EYED3_MODULE = False
 # Version compatiblity
 
 if (sys.version_info > (3, 0)):
@@ -179,6 +183,8 @@ def fix_id3_tags(title):
         artist = list_name[0]
         track_name = list_name[1]
     album_name = ''
+    if not EYED3_MODULE:
+        return title
     try:
         try:
             audiofile = eyed3.load((title + '.mp3'))
