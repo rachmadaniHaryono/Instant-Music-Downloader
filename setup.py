@@ -34,10 +34,10 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     install_requires=[
-        'youtube-dl',
-        'BeautifulSoup4',
-        'eyed3',
-        'requests'
+        'beautifulsoup4>=4.6.0',
+        'eyeD3>=0.8',
+        'requests>=2.14.2',
+        'youtube-dl>=2017.5.14',
     ] + (['pyreadline'] if platform.startswith('win') else []),
     zip_safe=False,
     entry_points={'console_scripts': [
