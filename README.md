@@ -46,6 +46,7 @@ On Windows
 >[See this](https://github.com/yask123/Instant-Music-Downloader/issues/19) 
 
 ## Usage
+![Image](https://github.com/rachmadaniHaryono/Instant-Music-Downloader/raw/master/res/screenshot.png)
 
 ```bash
 $ instantmusic 
