@@ -46,4 +46,5 @@ setup(
     entry_points={'console_scripts': [
         'instantmusic = instantmusic.instantmusic:main'
     ]},
+    keywords='instant music download',
 )
