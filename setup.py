@@ -26,7 +26,6 @@ setup(
     url='https://github.com/yask123/Instant-Music-Downloader',
     license='MIT',
     packages=['instantmusic'],
-    scripts=['bin/instantmusic'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
@@ -41,4 +40,7 @@ setup(
         'requests'
     ] + (['pyreadline'] if platform.startswith('win') else []),
     zip_safe=False,
+    entry_points={'console_scripts': [
+        'instantmusic = instantmusic.instantmusic:main'
+    ]},
 )
