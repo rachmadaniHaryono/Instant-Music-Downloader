@@ -158,7 +158,7 @@ def pick_from_search_result(search_result):
     title, video_link = available[int(choice)]
 
     valid = ['Y', 'y', '']
-    prompt = raw_input('Download "%s"? (y/n) ' % title)
+    prompt = raw_input('Download {}? (y/n) '.format(str(title)))
     if prompt.lower() not in valid:
         sys.exit()
 
@@ -406,7 +406,7 @@ def main():
                 downloads.append(query_and_download(song, prompt, quiet))
 
             try:
-                print('Downloaded: %s' % ', '.join(downloads))
+                print('Downloaded: {}'.format(str(', '.join(downloads))))
             except TypeError:
                 print('Downloaded: {}'.format(
                     ', '.join(map(lambda x: str(x), downloads))))
