@@ -158,7 +158,8 @@ def pick_from_search_result(search_result):
     title, video_link = available[int(choice)]
 
     valid = ['Y', 'y', '']
-    prompt = raw_input('Download {}? (y/n) '.format(str(title)))
+    title = title.decode('utf8') if isinstance(title, bytes) else title
+    prompt = raw_input('Download: {}? (y/n) '.format(str(title)))
     if prompt.lower() not in valid:
         sys.exit()
 
@@ -403,13 +404,13 @@ def main():
 
             downloads = []
             for song in song_list:
-                downloads.append(query_and_download(song, prompt, quiet))
+                download_parts = query_and_download(song, prompt, quiet)
+                download_parts = \
+                    download_parts.decode('utf8') \
+                    if isinstance(download_parts, bytes) else download_parts
+                downloads.append(download_parts)
 
-            try:
-                print('Downloaded: {}'.format(str(', '.join(downloads))))
-            except TypeError:
-                print('Downloaded: {}'.format(
-                    ', '.join(map(lambda x: str(x), downloads))))
+            print('Downloaded: {}'.format(', '.join(downloads)))
 
 
 if __name__ == '__main__':
